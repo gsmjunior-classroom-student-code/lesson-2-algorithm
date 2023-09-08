@@ -1,4 +1,4 @@
-# lesson-2-algorithm
+# Lesson2: algorithm
 
 - [ ] 휴식을 위하여
 - [ ] 약수 구하기
