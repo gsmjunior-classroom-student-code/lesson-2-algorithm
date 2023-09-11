@@ -3,17 +3,21 @@
 int main()
 {
     int a, b, R, N;
-    int x, y;
-    int i;
-    int count = 0;
-
+    
     scanf("%d %d %d", &a, &b, &R);
     scanf("%d", &N);
 
-    for(i = 0; i < N; i++)
+    int x[N], y[N];
+
+    for (int i = 0; i < N; i++)
     {
-        scanf("%d %d", &x, &y);
-        if((x-a)*(x-a) + (y-b)*(y-b) >= R*R)
+        scanf("%d %d", &x[i], &y[i]);
+    }
+
+    int count = 0;
+    for(int i = 0; i < N; i++)
+    {
+        if((x[i]-a)*(x[i]-a) + (y[i]-b)*(y[i]-b) >= R*R)
         {
             printf("silent\n");
         }
@@ -21,6 +25,8 @@ int main()
         {
             printf("noisy\n");
         }
+
+        count++;
     }
 
     return 0;    
